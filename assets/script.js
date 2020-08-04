@@ -23,11 +23,24 @@ function searchCityWeather(input) {
 
     console.log(pulldata.coord.lon);
     console.log(pulldata.coord.lat);
+    var mainCityLon = pulldata.coord.lon;
+    var mainCityLat = pulldata.coord.lat;
+    var queryURLAnother = "http://api.openweathermap.org/data/2.5/uvi?appid=1a4d9161e2e475ad0fc5e0df86649984&lat=" + mainCityLat + "&lon=" + mainCityLon;
+        $.ajax({
+            url: queryURLAnother,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+            console.log(response.value);
+            var mainCityUltra = $("<h4>").text("Current UV Index: " + response.value);
+            $(".main-city").append(mainCityUltra);
+            
+        });
 
     });
  
-    var queryURLAnother = "http://api.openweathermap.org/data/2.5/uvi?appid=1a4d9161e2e475ad0fc5e0df86649984&lat=51.51&lon=-0.13";
-    console.log(queryURLAnother);
+    
+    
 }
 
 
