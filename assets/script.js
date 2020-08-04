@@ -38,7 +38,15 @@ function searchCityWeather(input) {
         });
 
     });
- 
+    if (userHistory !== "") {
+        var search = JSON.parse(localStorage.getItem("search")) || [];
+
+        var userHistory = $(".user-input").val().trim();
+
+        search.push(userHistory);
+        localStorage.setItem("search", JSON.stringify(search));
+       
+    }
     
     
 }
