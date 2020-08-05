@@ -49,6 +49,17 @@ function searchCityWeather(input) {
             $(".main-city").append(mainCityUltra);
             
         });
+    
+    var futureDateMonth = pulldata.list[8].dt_txt.charAt(5) + pulldata.list[8].dt_txt.charAt(6);
+    var futureDateDay = pulldata.list[8].dt_txt.charAt(8) + pulldata.list[8].dt_txt.charAt(9);
+    
+    var futureCityDate = $("<h4 class='pt-3'>").html(futureDateMonth + "/" + futureDateDay + "/20");
+    var futureCityIcon = $("<h5>").html("<img width='50' src='http://openweathermap.org/img/wn/" + pulldata.list[0].weather[0].icon + "@2x.png'</img>");
+    var tempFF = (pulldata.list[8].main.temp - 273.15) * 1.80 + 32;
+    var futureCityTemp = $("<h5>").text("Temperature: " + tempFF.toFixed(2) + " " + String.fromCharCode(176) + "F"); 
+    var futureCityHumid = $("<h5>").text("Humidity: " + pulldata.list[8].main.humidity + "%");
+    $(".first-day").empty();
+    $(".first-day").append(futureCityDate,futureCityIcon,futureCityTemp,futureCityHumid);
 
     });
 
