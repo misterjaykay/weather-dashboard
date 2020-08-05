@@ -21,8 +21,11 @@ function searchCityWeather(input) {
     console.log(pulldata.list[0].wind.speed);
     console.log(pulldata.list[0].main.humidity);
     console.log(pulldata.list[0].weather[0].icon);
+    var todayDateMonth = pulldata.list[0].dt_txt.charAt(5) + pulldata.list[0].dt_txt.charAt(6);
+    var todayDateDay = pulldata.list[0].dt_txt.charAt(8) + pulldata.list[0].dt_txt.charAt(9);
     
-    var mainCityName = $("<h2>").html(pulldata.city.name + "<img width='50' src='http://openweathermap.org/img/wn/" + pulldata.list[0].weather[0].icon + "@2x.png'</img>");
+    var mainCityName = $("<h2>").html(pulldata.city.name + " " + todayDateMonth + "/" + todayDateDay + "/20" +
+        "<img width='50' src='http://openweathermap.org/img/wn/" + pulldata.list[0].weather[0].icon + "@2x.png'</img>");
     var tempF = (pulldata.list[0].main.temp - 273.15) * 1.80 + 32;
     var mainCityTemp = $("<h4>").text("Current Temperature: " + tempF.toFixed(2) + " " + String.fromCharCode(176) + "F");
     var mainCityWind = $("<h4>").text("Current Wind Speed: " + pulldata.list[0].wind.speed + "MpH");
