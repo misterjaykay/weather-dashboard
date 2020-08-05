@@ -1,4 +1,13 @@
+$(document).ready(function() {
+});
 
+
+
+var localTime  = moment.utc().toDate();
+var currentTime = moment(localTime).format("MMMM Do YYYY, h:mm");
+
+console.log(localTime);
+console.log(currentTime);
 
 function searchCityWeather(input) {
     var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + input + "&appid=1a4d9161e2e475ad0fc5e0df86649984";
@@ -11,8 +20,9 @@ function searchCityWeather(input) {
     console.log(pulldata.list[0].main.temp);
     console.log(pulldata.list[0].wind.speed);
     console.log(pulldata.list[0].main.humidity);
+    console.log(pulldata.list[0].weather[0].icon);
     
-    var mainCityName = $("<h2>").text(pulldata.city.name);
+    var mainCityName = $("<h2>").html(pulldata.city.name + "<img width='50' src='http://openweathermap.org/img/wn/" + pulldata.list[0].weather[0].icon + "@2x.png'</img>");
     var tempF = (pulldata.list[0].main.temp - 273.15) * 1.80 + 32;
     var mainCityTemp = $("<h4>").text("Current Temperature: " + tempF.toFixed(2) + " " + String.fromCharCode(176) + "F");
     var mainCityWind = $("<h4>").text("Current Wind Speed: " + pulldata.list[0].wind.speed + "MpH");
@@ -38,15 +48,29 @@ function searchCityWeather(input) {
         });
 
     });
-    if (userHistory !== "") {
-        var search = JSON.parse(localStorage.getItem("search")) || [];
 
-        var userHistory = $(".user-input").val().trim();
+    /////////////// SAVING THE DATA TO LOCALSTORAGE
+    // if (userHistory !== "") {
+    //     var search = JSON.parse(localStorage.getItem("search")) || [];
 
-        search.push(userHistory);
-        localStorage.setItem("search", JSON.stringify(search));
-       
-    }
+    //     var userHistory = $(".user-input").val().trim();
+
+    //     search.push(userHistory);
+    //     localStorage.setItem("search", JSON.stringify(search));
+    //     console.log(search);
+    //     console.log(userHistory);
+    // }
+
+    ////////////// FOR LOOPING TO GET LOCALSTORAGE
+    // for (var i = 0; i < search.length; i++) {
+    //     var index = search[i];
+    //     console.log(index);
+
+    //     var li = $("<li>");
+    //     $(li).text(search[i]);
+    //     $(".city-history").append(li);
+
+    // }
     
     
 }
