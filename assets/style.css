@@ -1,3 +1,14 @@
-h1 {
+.jumbotron {
     text-align: center;
+    background-color: lightskyblue;
+}
+
+body {
+    background-color: lightgray;
+
+}
+
+.first-day, .second-day, .third-day, .fourth-day, .fifth-day {
+    background-color: papayawhip;
+
 }
