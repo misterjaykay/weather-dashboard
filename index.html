@@ -17,69 +17,56 @@
         <h1>Welcome to Weather Dashboard</h1>
     </div>
     <div class="container">
-        <div class="row justify-content-between">
+        <div class="row">
             <!-- Search Box -->
-            <div class="col-md-2 py-1 input-group">
-                    
-                    <input class="user-input form-control"  type="text" 
-                        placeholder="Search City" name="search">
-                    <button class="user-submit form-control" type="submit">
-                            <i class="fa fa-search"></i>
-                    </button>
-                
+            <div class="col-md-3 py-3 mr-4 card text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 input-group">
+                            <input class="user-input form-control"  type="text" 
+                                placeholder="Search City" name="search">
+                            <span class="input-group-btn">
+                                <button class="user-submit form-control" type="submit">
+                                        <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <ul class="city-history list-group list-group-flush text-center">
+                            <li class="list-group-item">City One</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Searched Main City -->
-            <div class="col-md-9 py-3 card main-city">
+            <div class="col-md-7 py-3 ml-4 card main-city">
 
             </div>
         </div>
         <div class="row">
             <!-- Previous Search Lists -->
-            <div class="col-md-2 card my-5" style="width: 18rem;">
-                <ul class="city-history list-group list-group-flush">
-                  <li class="list-group-item">City One</li>
-                </ul>
-            </div>
+            
             <!-- 5 Day Forecast -->
             <!-- 1 of 5 -->
-            <div class="col-md-2 card my-5 first-day" style="max-width: 18rem;">
-                <!-- <div class="card-header">Date</div>
-                <div class="card-body">
-                  <h5 class="card-title">Info card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div> -->
+            <div class="col-md-2 card my-5 mr-3 text-center first-day" style="max-width: 18rem;">
+
             </div>
             <!-- 2 of 5 -->
-            <div class="col-md-2 card my-5 second-day" style="max-width: 18rem;">
-                <div class="card-header">Date</div>
-                <div class="card-body">
-                  <h5 class="card-title">Info card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+            <div class="col-md-2 card my-4 mr-3 text-center second-day" style="max-width: 18rem;">
+
             </div>
             <!-- 3 of 5 -->
-            <div class="col-md-2 card my-5 third-day" style="max-width: 18rem;">
-                <div class="card-header">Date</div>
-                <div class="card-body">
-                  <h5 class="card-title">Info card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>   
+            <div class="col-md-2 card my-5 mr-3 text-center third-day" style="max-width: 18rem;">
+  
             </div>
             <!-- 4 of 5 -->
-            <div class="col-md-2 card my-5 fourth-day" style="max-width: 18rem;">
-                <div class="card-header">Date</div>
-                <div class="card-body">
-                  <h5 class="card-title">Info card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+            <div class="col-md-2 card my-4 mr-3 text-center fourth-day" style="max-width: 18rem;">
+
             </div>
             <!-- 5 of 5 -->
-            <div class="col-md-2 card my-5 fifth-day" style="max-width: 18rem;">
-                <div class="card-header">Date</div>
-                <div class="card-body">
-                  <h5 class="card-title">Info card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
+            <div class="col-md-2 card my-5 mr-3 text-center fifth-day" style="max-width: 18rem;">
+
             </div>
             
         </div>

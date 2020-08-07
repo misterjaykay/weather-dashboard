@@ -5,14 +5,16 @@
 
 body {
     background-color: lightgray;
-
 }
 
+
+/* adding the colors to 5 day forecast cards */
 .first-day, .second-day, .third-day, .fourth-day, .fifth-day {
     background-color: papayawhip;
-
 }
 
+
+/* removing blue colors from hyperlinks */
 a:link {
     text-decoration: none;
     color: black;
@@ -21,4 +23,11 @@ a:link {
 a:visited {
     text-decoration: none;
     color: black;
+}
+
+/* button to be shown as like the lists */
+button {
+    background: none!important;
+    border: none;
+    /* padding: 0!important; */
 }
