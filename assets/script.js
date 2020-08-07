@@ -165,3 +165,12 @@ var search = JSON.parse(localStorage.getItem("search")) || [];
     }
 
 });
+
+// Today Weather API
+// http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=1a4d9161e2e475ad0fc5e0df86649984
+
+// UV Index API
+// http://api.openweathermap.org/data/2.5/uvi?appid=1a4d9161e2e475ad0fc5e0df86649984&lat={lat}&lon={lon}
+
+// 5 Days Forecasat API
+// http://api.openweathermap.org/data/2.5/forecast?q=seoul&appid=1a4d9161e2e475ad0fc5e0df86649984
