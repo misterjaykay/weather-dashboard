@@ -25,7 +25,7 @@ $(document).ready(function () {
 
     ///// FUNCTION TO BRING OUT USER INPUT CITY'S WEATHER
     function searchCityWeather(input) {
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + input + "&appid=1a4d9161e2e475ad0fc5e0df86649984";
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + input + "&appid=1a4d9161e2e475ad0fc5e0df86649984";
         $.ajax({
             url: queryURL,
             method: "GET"
